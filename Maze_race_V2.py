@@ -209,7 +209,7 @@ class MazeRace:
         self.running = False
 
 
-# ✅ USER INPUT (v2)
+# USER INPUT 
 def get_maze_size():
     while True:
         try:
