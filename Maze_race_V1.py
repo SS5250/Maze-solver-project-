@@ -298,7 +298,21 @@ class MazeRace:
 
 # RUN 
 
-size = 21
+
+def get_maze_size():
+    while True:
+        try:
+            size = int(input("Enter maze size (odd number > 5, e.g., 21): "))
+            if size > 5 and size % 2 == 1:
+                print(f"Generating maze of size {size}...")
+                return size
+            else:
+                print("Invalid input. Must be an odd number greater than 5.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+size = get_maze_size()
+
 maze = generate_maze(size)
 race = MazeRace(maze)
 plt.show()
